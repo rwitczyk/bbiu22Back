@@ -15,20 +15,99 @@ public class CarsCollection {
 
     public CarsCollection() {
         List<Car> exampleList = new ArrayList<>();
+        prepareExampleCarsList(exampleList);
+        prepareExampleCarsList(exampleList);
+        prepareExampleCarsList(exampleList);
+        prepareExampleCarsList(exampleList);
+        prepareExampleCarsList(exampleList);
+        prepareExampleCarsList(exampleList);
+        prepareExampleCarsList(exampleList);
+        prepareExampleCarsList(exampleList);
+        prepareExampleCarsList(exampleList);
+        prepareExampleCarsList(exampleList);
+        prepareExampleCarsList(exampleList);
+        prepareExampleCarsList(exampleList);
+
+        this.listOfCars = exampleList;
+    }
+
+    private void prepareExampleCarsList(List<Car> exampleList) {
         exampleList.add(Car.builder()
-                .id(1L)
+                .id((long) exampleList.size() + 1)
                 .company("Audi")
                 .model("A4")
                 .numberOfDoors(5)
                 .build());
 
         exampleList.add(Car.builder()
-                .id(2L)
-                .company("BMW")
+                .id((long) exampleList.size() + 1)
+                .company("Bmw")
                 .model("3")
                 .numberOfDoors(3)
                 .build());
-        this.listOfCars = exampleList;
+
+        exampleList.add(Car.builder()
+                .id((long) exampleList.size() + 1)
+                .company("Bmw")
+                .model("5")
+                .numberOfDoors(4)
+                .build());
+
+        exampleList.add(Car.builder()
+                .id((long) exampleList.size() + 1)
+                .company("Mercedes")
+                .model("3")
+                .numberOfDoors(3)
+                .build());
+
+        exampleList.add(Car.builder()
+                .id((long) exampleList.size() + 1)
+                .company("Peugeot")
+                .model("206")
+                .numberOfDoors(3)
+                .build());
+
+        exampleList.add(Car.builder()
+                .id((long) exampleList.size() + 1)
+                .company("Porsche")
+                .model("911")
+                .numberOfDoors(3)
+                .build());
+
+        exampleList.add(Car.builder()
+                .id((long) exampleList.size() + 1)
+                .company("Skoda")
+                .model("Superb")
+                .numberOfDoors(5)
+                .build());
+
+        exampleList.add(Car.builder()
+                .id((long) exampleList.size() + 1)
+                .company("Toyota")
+                .model("Yaris")
+                .numberOfDoors(3)
+                .build());
+
+        exampleList.add(Car.builder()
+                .id((long) exampleList.size() + 1)
+                .company("Hyundai")
+                .model("XXX")
+                .numberOfDoors(3)
+                .build());
+
+        exampleList.add(Car.builder()
+                .id((long) exampleList.size() + 1)
+                .company("Nissan")
+                .model("GTR")
+                .numberOfDoors(3)
+                .build());
+
+        exampleList.add(Car.builder()
+                .id((long) exampleList.size() + 1)
+                .company("Nissan")
+                .model("GTR Nismo")
+                .numberOfDoors(3)
+                .build());
     }
 
     public static CarsCollection getInstance() {
