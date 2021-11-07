@@ -23,6 +23,11 @@ public class CarsEndpoint {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    @GetMapping("/{carId}")
+    public ResponseEntity<Car> getCar(@PathVariable String carId) {
+        return new ResponseEntity<>(carsService.getCar(carId), HttpStatus.OK);
+    }
+
     @PutMapping("/{carId}")
     public ResponseEntity<Void> updateCar(@RequestBody Car car, @PathVariable Long carId) {
         carsService.updateCar(car, carId);

@@ -130,4 +130,8 @@ public class CarsCollection {
     public void removeCarById(Long carId) {
         listOfCars.removeIf(car -> car.getId().equals(carId));
     }
+
+    public Car findCarById(String carId) {
+        return listOfCars.stream().filter(car -> car.getId().equals(Long.parseLong(carId))).findFirst().get();
+    }
 }

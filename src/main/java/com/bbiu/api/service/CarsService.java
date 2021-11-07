@@ -25,4 +25,8 @@ public class CarsService {
     public List<Car> getAllCars() {
         return CarsCollection.getInstance().getListOfCars();
     }
+
+    public Car getCar(String carId) {
+        return CarsCollection.getInstance().findCarById(carId);
+    }
 }
